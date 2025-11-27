@@ -1,0 +1,161 @@
+/* From Uiverse.io by shadyeljokers */
+.login-page-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black; /* Example gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; /* If needed to go behind content */
+  }
+  
+
+
+.login-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+  background-color: black; /* sets the inner circle background */
+  }
+  
+  .login-container span {
+    position: absolute;
+  left: 0;
+  width: 32px;
+  height: 6px;
+  background: #2c4766;
+  border-radius: 80px;
+  transform-origin: 200px;
+  transform: rotate(calc(var(--i) * (360deg / 50)));
+  animation: blink 3s linear infinite;
+  animation-delay: calc(var(--i) * (3s / 50));
+  }
+  
+  @keyframes blink {
+    0% {
+      background: #0ef;
+    }
+    25% {
+      background: #2c4766;
+    }
+  }
+  
+  .login-box-inner {
+    position: absolute;
+  width: 80%;
+  max-width: 300px;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 20px;
+
+  }
+  
+  .login-form {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .login-heading {
+    font-size: 1.8em;
+    color: #0ef;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .login-input-box {
+    position: relative;
+    margin: 15px 0;
+  }
+  
+  .login-input-box input {
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 15px;
+    transition: 0.5s ease;
+  }
+  
+  .login-input-box input:focus {
+    border-color: #0ef;
+  }
+  
+  .login-input-box input.not-empty ~ label,
+.login-input-box input:focus ~ label {
+  top: -10px;
+  font-size: 0.8em;
+  background: #1f293a;
+  padding: 0 6px;
+  color: #0ef;
+}
+  
+  .login-input-box label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s ease;
+    color: #fff;
+  }
+  
+  .login-forgot-pass {
+    margin: -10px 0 10px;
+    text-align: center;
+  }
+  
+  .login-forgot-pass a {
+    font-size: 0.85em;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .login-btn {
+    width: 100%;
+    height: 45px;
+    background: #0ef;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #1f293a;
+    font-weight: 600;
+  }
+  
+  .login-signup-link {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .login-signup-link a {
+    font-size: 1em;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
